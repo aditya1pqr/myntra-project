@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <main>
-        <div class="items-container">
+        <div className="items-container">
           <HomeItems item ={item}/>
         </div>
       </main>
