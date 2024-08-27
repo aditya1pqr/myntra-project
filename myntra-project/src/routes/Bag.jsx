@@ -1,11 +1,9 @@
 import React from 'react'
-import Header from './Header'
-import Footer from './Footer'
+
 
 function Bag() {
   return (
     <div>
-        <Header/>
     <main>
       <div className="bag-page">
         <div className="bag-items-container">
@@ -15,7 +13,7 @@ function Bag() {
 
       </div>
     </main>
-   <Footer/>
+ 
     </div>
   )
 }
