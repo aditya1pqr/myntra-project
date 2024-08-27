@@ -1,4 +1,5 @@
-import React from 'react'
+import { BsFillPersonFill } from "react-icons/bs";
+import { FaFaceGrinHearts, FaBagShopping } from "react-icons/fa6";
 
 function Header() {
   return (
@@ -20,17 +21,17 @@ function Header() {
         </div>
         <div class="action_bar">
             <div class="action_container">
-                <span class="material-symbols-outlined action_icon">person</span>
+            <BsFillPersonFill />
                 <span class="action_name">Profile</span>
             </div>
 
             <div class="action_container">
-                <span class="material-symbols-outlined action_icon">favorite</span>
+            <FaFaceGrinHearts />
                 <span class="action_name">Wishlist</span>
             </div>
 
             <a class="action_container" href="pages/bag.html">
-                <span class="material-symbols-outlined action_icon">shopping_bag</span>
+            <FaBagShopping />
                 <span class="action_name">Bag</span>
                 <span class="bag-item-count">0</span>
             </a>
