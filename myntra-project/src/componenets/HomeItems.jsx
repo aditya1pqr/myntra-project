@@ -1,6 +1,7 @@
 import React from 'react'
 
 function HomeItems({item}) {
+  console.log(item)
   return (
     <div className="item-container">
     <img className="item-image" src={item.image} alt="item image"/>
@@ -12,9 +13,9 @@ function HomeItems({item}) {
     <div className="price">
         <span className="current-price">Rs {item.current_price}</span>
         <span className="original-price">Rs {item.original_price}</span>
-        <span className="discount">(${item.discount_percentage}% OFF)</span>
+        <span className="discount">({item.discount_percentage}% OFF)</span>
     </div>
-    <button className="btn-add-bag" onclick={()=> console.log("items was clicked")}>Add to Bag</button>
+    <button className="btn-add-bag" onClick={()=> console.log("items was clicked")}>Add to Bag</button>
   </div>
   )
 }
