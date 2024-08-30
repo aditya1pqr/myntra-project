@@ -1,6 +1,14 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { RiDeleteBin5Fill } from "react-icons/ri";
+import { bagActions } from '../store/bagSlice';
 
 function BagItem({item}) {
+  const dispatch = useDispatch();
+
+  const handleRemoveItem = () => {
+    dispatch(bagActions.removeFromBag(item.id));
+  };
   return (
     <div>
       <div className="bag-item-container">
@@ -24,7 +32,9 @@ function BagItem({item}) {
       </div>
     </div>
 
-    <div className="remove-from-cart" onclick={()=>{console.log("items is removed from the bag")}}>X</div>
+    <div className="remove-from-cart"onClick={handleRemoveItem}>
+    <RiDeleteBin5Fill />
+    </div>
   </div>
     </div>
   )
